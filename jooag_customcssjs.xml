@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2.0" type="plugin" group="system" method="upgrade">
+	<name>JooAg CustomJsCss</name>
+	<creationDate>04.04.2013</creationDate>
+	<author>joomla-agentur.de - Ufuk Avcu</author>
+	<authorEmail>info@joomla-agentur.de</authorEmail>
+	<authorUrl>http://www.joomla-agentur.de</authorUrl>
+	<copyright>(C) 2009 - 2015 JooAg. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>3.x.0 Beta</version>
+	<description><![CDATA[
+	Allows the addition of custom CSS and JS to your site</br>
+	Path for example empty CSS file: media/customcssjs/frontend.css</br>
+	Path for example empty JS file: media/customcssjs/frontend.js</br>
+	Path for example empty CSS file: media/customcssjs/backend.css</br>
+	Path for example empty JS file: media/customcssjs/backend.js</br>
+	]]>
+	</description>
+	<files>
+		<filename plugin="jooag_customcssjs">jooag_customcssjs.php</filename>
+	</files>
+	<media destination="customcssjs" folder="media">
+		<filename>frontend.css</filename>
+		<filename>frontend.js</filename>
+		<filename>backend.css</filename>
+		<filename>backend.js</filename>
+	</media>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="frontend1css" label="&lt;h2&gt;Custom CSS&lt;/h2&gt;" />
+				<field name="frontcss" type="text" default="" placeholder="test" label="Frontend CSS File" description="e.g. media/customcssjs/frontend.css" />
+				<field name="frontcssposition" type="radio" default="0" label="Plugin initialization" description="">
+				  <option value="0">Last - onBeforeRender</option>
+				  <option value="1">First - onAfterInitialise</option>
+				</field>
+				<field type="spacer" name="frontend3css" label="&lt;hr&gt;&lt;/hr&gt;" />
+				<field name="backcss" type="text" default="" label="Backend CSS File" description="e.g. media/customcssjs/backend.css" />
+				<field name="backcssposition" type="radio" default="0" label="Plugin initialization" description="">
+				  <option value="0">Last - onBeforeRender</option>
+				  <option value="1">First - onAfterInitialise</option>
+				</field>
+				<field type="spacer" name="frontendjs" label="&lt;h2&gt;Custom JS&lt;/h2&gt;" />
+				<field name="frontjs" type="text" default="" label="Frontend JS File" description="e.g. media/customcssjs/frontend.js" />
+				<field name="frontjsposition" type="radio" default="0" label="Plugin initialization" description="">
+				  <option value="0">Last - onBeforeRender</option>
+				  <option value="1">First - onAfterInitialise</option>
+				</field>
+				<field type="spacer" name="frontend5css" label="&lt;hr&gt;&lt;/hr&gt;" />
+				<field name="backjs" type="text" default="" label="Backend JS File" description="e.g. media/customcssjs/backend.js" />
+				<field name="backjsposition" type="radio" default="0" label="Plugin initialization" description="">
+				  <option value="0">Last - onBeforeRender</option>
+				  <option value="1">First - onAfterInitialise</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
