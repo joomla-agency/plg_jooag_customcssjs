@@ -10,10 +10,7 @@
 	<version>3.x.0 Beta</version>
 	<description><![CDATA[
 	Allows the addition of custom CSS and JS to your site</br>
-	Path for example empty CSS file: media/customcssjs/frontend.css</br>
-	Path for example empty JS file: media/customcssjs/frontend.js</br>
-	Path for example empty CSS file: media/customcssjs/backend.css</br>
-	Path for example empty JS file: media/customcssjs/backend.js</br>
+	Path for example files: media/customcssjs/</br>
 	]]>
 	</description>
 	<files>
@@ -30,25 +27,25 @@
 		<fields name="params">
 			<fieldset name="basic">
 				<field type="spacer" name="frontend1css" label="&lt;h2&gt;Custom CSS&lt;/h2&gt;" />
-				<field name="frontcss" type="text" default="" placeholder="test" label="Frontend CSS File" description="e.g. media/customcssjs/frontend.css" />
+				<field name="frontcss" type="filelist" label="Frontend CSS File" directory="media/customcssjs/" filter="css" exclude="js" />
 				<field name="frontcssposition" type="radio" default="0" label="Plugin initialization" description="">
 				  <option value="0">Last - onBeforeRender</option>
 				  <option value="1">First - onAfterInitialise</option>
 				</field>
 				<field type="spacer" name="frontend3css" label="&lt;hr&gt;&lt;/hr&gt;" />
-				<field name="backcss" type="text" default="" label="Backend CSS File" description="e.g. media/customcssjs/backend.css" />
+				<field name="backcss" type="filelist" label="Backend CSS File" directory="media/customcssjs/" filter="css" exclude="js" />
 				<field name="backcssposition" type="radio" default="0" label="Plugin initialization" description="">
 				  <option value="0">Last - onBeforeRender</option>
 				  <option value="1">First - onAfterInitialise</option>
 				</field>
 				<field type="spacer" name="frontendjs" label="&lt;h2&gt;Custom JS&lt;/h2&gt;" />
-				<field name="frontjs" type="text" default="" label="Frontend JS File" description="e.g. media/customcssjs/frontend.js" />
+				<field name="frontjs" type="filelist" label="Frontend JS File" directory="media/customcssjs/" filter="js" exclude="css" />
 				<field name="frontjsposition" type="radio" default="0" label="Plugin initialization" description="">
 				  <option value="0">Last - onBeforeRender</option>
 				  <option value="1">First - onAfterInitialise</option>
 				</field>
 				<field type="spacer" name="frontend5css" label="&lt;hr&gt;&lt;/hr&gt;" />
-				<field name="backjs" type="text" default="" label="Backend JS File" description="e.g. media/customcssjs/backend.js" />
+				<field name="backjs" type="filelist" label="Backend JS File" directory="media/customcssjs/" filter="js" exclude="css" />
 				<field name="backjsposition" type="radio" default="0" label="Plugin initialization" description="">
 				  <option value="0">Last - onBeforeRender</option>
 				  <option value="1">First - onAfterInitialise</option>

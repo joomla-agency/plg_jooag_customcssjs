@@ -19,20 +19,19 @@ class plgSystemJooag_CustomCssJs extends JPlugin {
     	$doc = JFactory::getDocument();
 
     	if ($app->isAdmin()){
-			if( file_exists($this->params->get('backcss')) and $this->params->get('backcssposition') == '1'){
-				$doc->addStyleSheet($this->params->get('backcss'));
+			if( strpos($this->params->get('backcss'), 'css') and $this->params->get('backcssposition') == '1'){
+				$doc->addStyleSheet(JURI::root().'media/customcssjs/'.$this->params->get('backcss'));
 			}
-			if( file_exists($this->params->get('backjs')) and $this->params->get('backjsposition') == '1'){
-				$doc->addScript($this->params->get('backjs'));
+			if( strpos($this->params->get('backjs'), 'js') and $this->params->get('backjsposition') == '1'){
+				$doc->addScript(JURI::root().'media/customcssjs/'.$this->params->get('backjs'));
 			}	
         }
 		else{ 
-			if( file_exists($this->params->get('frontcss')) and $this->params->get('frontcssposition') == '1'){
-				$doc->addStyleSheet($this->params->get('frontcss'));
-			}	
-			
-			if( file_exists($this->params->get('frontjs')) and $this->params->get('frontjsposition') == '1'){
-				$doc->addScript($this->params->get('frontjs'));
+			if( strpos($this->params->get('frontcss'), 'css') and $this->params->get('frontcssposition') == '1'){
+				$doc->addStyleSheet('media/customcssjs/'.$this->params->get('frontcss'));
+			}		
+			if( strpos($this->params->get('frontjs'), 'js') and $this->params->get('frontjsposition') == '1'){
+				$doc->addScript('media/customcssjs/'.$this->params->get('frontjs'));
 			}	
         }
     }
@@ -43,20 +42,19 @@ class plgSystemJooag_CustomCssJs extends JPlugin {
     	$doc = JFactory::getDocument();
 
     	if ($app->isAdmin()){
-			if( file_exists($this->params->get('backcss')) and $this->params->get('backcssposition') == '0'){
-				$doc->addStyleSheet($this->params->get('backcss'));
+			if( strpos($this->params->get('backcss'), 'css') and $this->params->get('backcssposition') == '0'){
+				$doc->addStyleSheet('media/customcssjs/'.$this->params->get('backcss'));
 			}
-			if( file_exists($this->params->get('backjs')) and $this->params->get('backjsposition') == '0'){
-				$doc->addScript($this->params->get('backjs'));
+			if( strpos($this->params->get('backjs'), 'js') and $this->params->get('backjsposition') == '0'){
+				$doc->addScript('media/customcssjs/'.$this->params->get('backjs'));
 			}	
         }
 		else{ 
-			if( file_exists($this->params->get('frontcss')) and $this->params->get('frontcssposition') == '0'){
-				$doc->addStyleSheet($this->params->get('frontcss'));
-			}	
-			
-			if( file_exists($this->params->get('frontjs')) and $this->params->get('frontjsposition') == '0'){
-				$doc->addScript($this->params->get('frontjs'));
+			if( strpos($this->params->get('frontcss'), 'css') and $this->params->get('frontcssposition') == '0'){
+				$doc->addStyleSheet('media/customcssjs/'.$this->params->get('frontcss'));
+			}		
+			if( strpos($this->params->get('frontjs'), 'js') and $this->params->get('frontjsposition') == '0'){
+				$doc->addScript('media/customcssjs/'.$this->params->get('frontjs'));
 			}	
         }
     }
