@@ -14,7 +14,7 @@
 	]]>
 	</description>
 	<files>
-		<folder plugin="jooag_customcssjs">customcssjs</filename>
+		<folder>customcssjs</folder>
 		<filename plugin="jooag_customcssjs">jooag_customcssjs.php</filename>
 	</files>
 	<media destination="customcssjs" folder="media">
