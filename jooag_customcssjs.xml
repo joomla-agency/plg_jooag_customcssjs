@@ -17,11 +17,11 @@
 		<folder>customcssjs</folder>
 		<filename plugin="jooag_customcssjs">jooag_customcssjs.php</filename>
 	</files>
-	<media destination="customcssjs" folder="media">
-		<filename>frontend.css</filename>
-		<filename>frontend.js</filename>
-		<filename>backend.css</filename>
-		<filename>backend.js</filename>
+	<media folder="media">
+		<filename>customcssjs/frontend.css</filename>
+		<filename>customcssjs/frontend.js</filename>
+		<filename>customcssjs/backend.css</filename>
+		<filename>customcssjs/backend.js</filename>
 	</media>
 
 	<config>
